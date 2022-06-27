@@ -12,7 +12,7 @@ function App() {
 
   function closePopups() {
     setEditAvatarProfilePopupOpen(false);
-    setEditAvatarProfilePopupOpen(false);
+    setEditProfilePopupOpen(false);
     setAddCardPopupOpen(false);
   }
 
@@ -21,9 +21,9 @@ function App() {
   <Header />
   
   <Main 
-    editProfile = {setEditProfilePopupOpen}
-    editAvatar = {setEditAvatarProfilePopupOpen}
-    addCard = {setAddCardPopupOpen}
+    onEditProfile = {setEditProfilePopupOpen}
+    onEditAvatar = {setEditAvatarProfilePopupOpen}
+    onAddCard = {setAddCardPopupOpen}
   />
 
   <Footer />
@@ -32,7 +32,7 @@ function App() {
     name = "edit"
     title = "Редактировать профиль"
     isOpen = {editProfilePopupOpen}
-    onClose = {closePopups}
+    close = {closePopups}
     text = "Сохранить">
       <input
         id="name-input" 
@@ -58,7 +58,7 @@ function App() {
     name = "avatar"
     title = "Обновить аватар"
     isOpen = {editAvatarProfilePopupOpen}
-    onClose = {closePopups}
+    close = {closePopups}
     text = "Сохранить">
       <input
         type="url"
@@ -71,9 +71,9 @@ function App() {
 
   <PopupWithForm
     name="add"
-    titile="Новое место"
+    title="Новое место"
     isOpen={addCardPopupOpen}
-    onClose={closePopups}
+    close={closePopups}
     text="Создать">
       <input 
         id="title-input" 
