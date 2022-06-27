@@ -2,18 +2,21 @@ import React from "react";
 import Header from "./Header.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
-import PopupWithForm from "./PopupWithForm.js"
+import PopupWithForm from "./PopupWithForm.js";
+import ImagePopup from "./ImagePopup.js";
 
 
 function App() {
   const [editProfilePopupOpen, setEditProfilePopupOpen] = React.useState(false);
   const [editAvatarProfilePopupOpen, setEditAvatarProfilePopupOpen] = React.useState(false);
   const [addCardPopupOpen, setAddCardPopupOpen] = React.useState(false);
+  const [card, setCard] = React.useState({});
 
   function closePopups() {
     setEditAvatarProfilePopupOpen(false);
     setEditProfilePopupOpen(false);
     setAddCardPopupOpen(false);
+    setCard({});
   }
 
   return (
@@ -24,6 +27,7 @@ function App() {
     onEditProfile = {setEditProfilePopupOpen}
     onEditAvatar = {setEditAvatarProfilePopupOpen}
     onAddCard = {setAddCardPopupOpen}
+    onCardClick = {setCard}
   />
 
   <Footer />
@@ -92,6 +96,8 @@ function App() {
         name="link" required />
       <span className="link-input-error popup__input-error" id="link-input-error"></span>
   </PopupWithForm>
+
+  <ImagePopup card = {card} close = {closePopups} />  
 
     <div className="popup popup_open-image">
       <div className="popup__image-container">
