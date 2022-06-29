@@ -31,7 +31,7 @@ function Main({onEditProfile, onAddCard, onEditAvatar, onCardClick}) {
     .then((card) => {
       setCards(
         card.map((item) => ({
-          id: item.id,
+          id: item._id,
           link: item.link,
           name: item.name,
           likes: item.likes

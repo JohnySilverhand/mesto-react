@@ -99,24 +99,6 @@ function App() {
 
   <ImagePopup card = {card} close = {closePopups} />  
 
-    <div className="popup popup_open-image">
-      <div className="popup__image-container">
-        <img className="popup__image" alt="f"/>
-        <p className="popup__image-text"></p>
-        <button className="popup__close-button popup__close-button_image" type="button"></button>
-      </div>
-    </div>
-
-    <div className="popup popup-delete">
-      <div className="popup__container popup-delete__container">
-        <h3 className="popup__header">Вы уверены?</h3>
-        <button className="popup__close-button popup__close-button-avatar" type="button"></button>
-        <form className="popup__form popup__form-delete" id="delete" name="delete" noValidate>
-          <button className="popup__form-submit popup__form-submit-delete">Да</button>
-        </form>
-      </div>
-    </div>
-
   </div>
   );
 }
