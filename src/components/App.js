@@ -21,23 +21,23 @@ function App() {
 
   return (
   <div className="page">
-  <Header />
+    <Header />
   
-  <Main 
-    onEditProfile = {setEditProfilePopupOpen}
-    onEditAvatar = {setEditAvatarProfilePopupOpen}
-    onAddCard = {setAddCardPopupOpen}
-    onCardClick = {setCard}
-  />
+    <Main 
+      onEditProfile = {setEditProfilePopupOpen}
+      onEditAvatar = {setEditAvatarProfilePopupOpen}
+      onAddCard = {setAddCardPopupOpen}
+      onCardClick = {setCard}
+    />
 
-  <Footer />
+    <Footer />
 
-  <PopupWithForm 
-    name = "edit"
-    title = "Редактировать профиль"
-    isOpen = {editProfilePopupOpen}
-    close = {closePopups}
-    text = "Сохранить">
+    <PopupWithForm 
+      name = "edit"
+      title = "Редактировать профиль"
+      isOpen = {editProfilePopupOpen}
+      onClose = {closePopups}
+      text = "Сохранить">
       <input
         id="name-input" 
         type="text" 
@@ -56,14 +56,14 @@ function App() {
         maxLength="200"
         name="about" required />
       <span className="about-input-error popup__input-error" id="about-input-error"></span>
-  </PopupWithForm>
+    </PopupWithForm>
 
-  <PopupWithForm
-    name = "avatar"
-    title = "Обновить аватар"
-    isOpen = {editAvatarProfilePopupOpen}
-    close = {closePopups}
-    text = "Сохранить">
+    <PopupWithForm
+      name = "avatar"
+      title = "Обновить аватар"
+      isOpen = {editAvatarProfilePopupOpen}
+      onClose = {closePopups}
+      text = "Сохранить">
       <input
         type="url"
         id="avatar-input"
@@ -71,14 +71,15 @@ function App() {
         name="avatar"
         className="popup__input popup__input_type-avatar" required/>
       <span className="title-input-error popup__input-error" id="title-input-error"></span>
-  </PopupWithForm>
+      <div className="popup_avatar__span"></div>
+    </PopupWithForm>
 
-  <PopupWithForm
-    name="add"
-    title="Новое место"
-    isOpen={addCardPopupOpen}
-    close={closePopups}
-    text="Создать">
+    <PopupWithForm
+      name="add"
+      title="Новое место"
+      isOpen={addCardPopupOpen}
+      onClose={closePopups}
+      text="Создать">
       <input 
         id="title-input" 
         type="text" 
@@ -95,9 +96,9 @@ function App() {
         placeholder="Ссылка на картинку"
         name="link" required />
       <span className="link-input-error popup__input-error" id="link-input-error"></span>
-  </PopupWithForm>
+    </PopupWithForm>
 
-  <ImagePopup card = {card} close = {closePopups} />  
+    <ImagePopup card = {card} close = {closePopups} />  
 
   </div>
   );

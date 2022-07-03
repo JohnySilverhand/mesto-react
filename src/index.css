@@ -52,3 +52,4 @@
 @import url(./blocks/popup-delete/__form-delete/popup__form-delete.css);
 @import url(./blocks/popup-avatar/__container/popup-avatar__container.css);
 @import url(./blocks/popup-avatar/__form-submit/popup-form-submit-avatar.css);
+@import url(./blocks/popup/_avatar/__span/popup_avatar__span.css);
