@@ -80,8 +80,8 @@ dislikeCard(data) {
 const api = new Api({
 	url: 'https://mesto.nomoreparties.co/v1/cohort-42',
 	headers: {
-	   authorization:'b50f3450-54d5-4593-a544-5015c37d1c2e',
-	  'Content-Type':'application/json',
+		 authorization:'b50f3450-54d5-4593-a544-5015c37d1c2e',
+		'Content-Type':'application/json',
 	}
 });
 
