@@ -47,13 +47,15 @@ function Main({onEditProfile, onAddCard, onEditAvatar, onCardClick}) {
 		<main className="content">
       <section className="profile">
         <div className="profile__flex-row">
-          <img className="profile__image" alt="картинка профиля" src={userAvatar} onClick={() => {onEditAvatar(true)}} />
-            <button className="profile__image-button" type="button" onClick={() => {onEditAvatar(true)}}></button>
-            <div className="profile__info">
-              <h1 className="profile__header">{userName}</h1>
-              <p className="profile__text">{userDescription}</p>
-              <button className="profile__edit" type="button" onClick={() => {onEditProfile(true)}}></button>
-            </div>
+          <div className="profile__image-container" onClick={() => {onEditAvatar(true)}}>
+            <img className="profile__image" alt="картинка профиля" src={userAvatar} />
+            <button className="profile__image-button" type="button"></button>
+          </div>
+        <div className="profile__info">
+          <h1 className="profile__header">{userName}</h1>
+          <p className="profile__text">{userDescription}</p>
+          <button className="profile__edit" type="button" onClick={() => {onEditProfile(true)}}></button>
+        </div>
         </div>
         <button className="profile__add-button" type="button" onClick={() => {onAddCard(true)}}></button>
       </section>

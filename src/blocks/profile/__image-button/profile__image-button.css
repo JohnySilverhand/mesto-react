@@ -13,8 +13,3 @@
   right: 72px;
 	border: none;
 }
-
-.profile__image-button:hover {
-	opacity: 1;
-	transition: opacity .5s ease-in-out;
-}
