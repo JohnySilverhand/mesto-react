@@ -69,8 +69,7 @@ function App() {
         id="avatar-input"
         placeholder="Ссылка на аватар"
         name="avatar"
-        className="popup__input popup__input_type-avatar" required/>
-      <span className="title-input-error popup__input-error" id="title-input-error"></span>
+        className="popup__input popup__input_type_avatar" required/>
       <div className="popup_avatar__span"></div>
     </PopupWithForm>
 
