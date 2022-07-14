@@ -4,10 +4,10 @@ import Card from "../components/Card.js";
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
 
-function Main({onEditProfile, onAddCard, onEditAvatar, onCardClick, cards}) {
+function Main({onEditProfile, onAddCard, onEditAvatar, onCardClick, cards, onCardLike, onCardDelete}) {
 
   const currentUser = React.useContext(CurrentUserContext);
-  
+    
 	return (
 		<main className="content">
       <section className="profile">
@@ -36,6 +36,8 @@ function Main({onEditProfile, onAddCard, onEditAvatar, onCardClick, cards}) {
             name = {card.name}
             likes = {card.likes}
             onCardClick = {onCardClick}
+            onCardLike = {onCardLike}
+            onCardDelete = {onCardDelete}
             />
           ))}
         </ul>
