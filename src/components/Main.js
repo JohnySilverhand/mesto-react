@@ -9,7 +9,7 @@ function Main({onEditProfile, onAddCard, onEditAvatar, onCardClick, cards, onCar
   const currentUser = React.useContext(CurrentUserContext);
     
 	return (
-		<main className="content">
+    <main className="content">
       <section className="profile">
         <div className="profile__flex-row">
           <div className="profile__image-container" onClick={() => {onEditAvatar(true)}}>
