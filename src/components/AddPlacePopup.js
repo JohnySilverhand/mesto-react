@@ -36,7 +36,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
       text="Создать">
       <input 
         onChange={handleChangePlace}
-        value={place}
+        value={place || ""}
         id="title-input" 
         type="text" 
         className="popup__input  popup__input_type_header"  
@@ -46,7 +46,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
         name="name" required />
       <span className="title-input-error popup__input-error" id="title-input-error"></span>
       <input
-        value={url} 
+        value={url || ""} 
         onChange={handleChangeUrl}
         id="link-input"
         className="popup__input  popup__input_type_src"
